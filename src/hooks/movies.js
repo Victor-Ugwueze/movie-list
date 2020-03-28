@@ -16,10 +16,10 @@ export function useFetchMovie(searchInput) {
           setError(null);
           setStatus("finished");
         }catch({ response }){
-          if(response.status === 404) {
+          if( response && response.status === 404) {
             setError({ status: 404, message: 'movie not found' })
           } else {
-             setError({ status: 500, message: 'Server error' })
+             setError({ status: 500, message: 'Server error, please try again...' })
           }
           setStatus("finished");
         }

@@ -1,5 +1,11 @@
 .error-block {
   margin-top: 20px;
+  width: 100%;
+}
+
+.alert {
+  width: 100%;
+  text-align: center;
 }
 
 main {
