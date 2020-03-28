@@ -17,14 +17,14 @@ export function useFetchMovie(searchInput) {
           setStatus("finished");
         }catch({ response }){
           if(response.status === 404) {
-              setError("movie not found")
+            setError({ status: 404, message: 'movie not found' })
           } else {
-              setError("Server error")
+             setError({ status: 500, message: 'Server error' })
           }
           setStatus("finished");
         }
       }
-        search()
+        search();
     }, [searchInput]);
     return {
         movie,
