@@ -6,7 +6,7 @@ import Loader from '../components/Loader';
 export default function MovieList() {
   const { status, error, movie } = useMovie();
 
-  if (status) return <Loader className="d-flex full-page" />;
+  if (status === 'pending') return <Loader className="d-flex full-page" />;
 
   let { episodes } = movie._embedded;
 
