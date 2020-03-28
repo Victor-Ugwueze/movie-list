@@ -13,13 +13,14 @@ export default function MovieCard({ episode }) {
       <div className="card-body">
         <h5 className="card-title">{episode.name}</h5>
         <p className="card-text">
-          {episode.summary}
+          {episode.summary
+            ? `${episode.summary.substring(0, 255).replace('<p>', '')}...`
+            : ''}
         </p>
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Season: {episode.season}</li>
         <li className="list-group-item">AirDate: {episode.airdate}</li>
-        <li className="list-group-item">Vestibulum at eros</li>
       </ul>
       <div className="card-body">
         <a href="#" className={episode.url}>

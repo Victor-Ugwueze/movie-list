@@ -13,8 +13,8 @@ export default function Searchbar({ onInputChange }) {
   }
 
   return (
-    <nav class="navbar navbar-light bg-light justify-content-between mb-20">
-      <a class="navbar-brand">Navbar</a>
+    <nav class="navbar navbar-light fixed-top bg-light justify-content-between mb-20">
+      <a class="navbar-brand" href="/" >Movie App</a>
       <form class="form-inline" onSubmit={handleSubmit}>
         <input
           class="form-control mr-sm-2"
