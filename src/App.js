@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { MovieProvider } from './context/movie-context';
-import MovieList from './views//movie-list'
+import MovieList from './pages//movie-list'
 import Layout from './layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

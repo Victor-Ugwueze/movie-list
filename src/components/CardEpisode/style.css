@@ -11,3 +11,15 @@
     align-items: center;
     color: white;
 }
+
+a {
+ text-decoration: none !important;
+ color: #000000 !important;
+}
+a img {
+    opacity: 0.85;
+}
+
+a:hover img{
+    opacity: 0.95;
+}
