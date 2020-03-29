@@ -21,6 +21,7 @@ export default function MovieList() {
         </div>
       ) : (
         <div className="d-flex flex-column align-items-center">
+        <h1>{movie.name}</h1>
           {episodes.map(episode => (
             <MovieCard key={episode.id} episode={episode} />
           ))}
