@@ -14,6 +14,12 @@ const NotFound = () => {
   )
 }
 
+const Extra = () => {
+  return (
+    <div>Testing Page</div>
+  )
+}
+
 function App() {
     return (
       <MovieProvider>
@@ -21,6 +27,7 @@ function App() {
          <Router>
           <Switch>
             <Route path="/" exact component={MovieList} />
+            <Route  path="/test" component={Extra} />
             <Route component={NotFound} />
           </Switch>
         </Router>

@@ -33,10 +33,12 @@ export function useFetchMovie(searchInput) {
     error: null,
   });
 
+  const baseURL = process.env.REACT_APP_API_URL
+
   useEffect(() => {
     async function search() {
       dispatch({ type: 'SET_STATUS', status: 'pending' });
-      let url = `https://api.tvmaze.com/singlesearch/shows?q=${searchInput}&embed=episodes`;
+      let url = `${baseURL}shows?q=${searchInput}&embed=episodes`;
       try {
         let result = await axios.get(url);
         dispatch({ type: 'SET_MOVIE', data: result.data });
