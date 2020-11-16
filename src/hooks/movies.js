@@ -33,9 +33,9 @@ export function useFetchMovie(searchInput) {
     error: null,
   });
 
-  const baseURL = process.env.REACT_APP_API_URL
 
   useEffect(() => {
+    const baseURL = process.env.REACT_APP_API_URL
     async function search() {
       dispatch({ type: 'SET_STATUS', status: 'pending' });
       let url = `${baseURL}shows?q=${searchInput}&embed=episodes`;
