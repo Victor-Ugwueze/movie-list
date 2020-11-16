@@ -9,3 +9,4 @@
   to = "https://api.tvmaze.com/singlesearch/:splat"
   status = 200
   force = true
+  headers = {X-From = "Netlify"}
