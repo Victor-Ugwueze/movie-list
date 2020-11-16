@@ -38,7 +38,7 @@ export function useFetchMovie(searchInput) {
     // const baseURL = process.env.REACT_APP_API_URL
     async function search() {
       dispatch({ type: 'SET_STATUS', status: 'pending' });
-      let url = `/shows?q=${searchInput}&embed=episodes`;
+      let url = `/api/shows?q=${searchInput}&embed=episodes`;
       try {
         let result = await axios.get(url);
         dispatch({ type: 'SET_MOVIE', data: result.data });
